@@ -6,11 +6,37 @@ html {
 .main-screen {
     display: flex;
     width: 100%; 
-    justify-content: space-around; 
+    justify-content: center; 
 }
 
 .main-screen > div {
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
-    
+
+.middle-main {
+    /* flex-grow: -2; */
+    display: flex;
+    flex-shrink: 2;
+}
+
+.num-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.num-buttons > input {
+    box-sizing: border-box;
+    width: 35px;
+    padding: 0px;
+    border: 1;
+    text-align: center
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
