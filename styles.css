@@ -1,42 +1,92 @@
 html {
-  height: 100%;
-  width: 100%;
-}
-
-.main-screen {
-    display: flex;
-    width: 100%; 
-    justify-content: center; 
-}
-
-.main-screen > div {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.middle-main {
-    /* flex-grow: -2; */
-    display: flex;
-    flex-shrink: 2;
-}
-
-.num-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.num-buttons > input {
-    box-sizing: border-box;
-    width: 35px;
-    padding: 0px;
-    border: 1;
-    text-align: center
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-evenly;
+  }
+  
+  #main-section {
+      flex: 0 0 60%; 
+  }
+  
+  header {
+      flex: 1;
+      height: 100%;
+      width: 100%;
+      flex: 0 0 20%;
+      
+  }
+  
+  main {
+      height: 100%;
+    width: 100%;
+  }
+  
+  footer {
+      height: 100%;
+      width: 100%;
+      flex: 0 0 20%;
+  }
+  
+  .main-screen {
+      display: flex;
+      height: 50%;
+      width: 100%; 
+      justify-content: center; 
+  }
+  
+  .main-screen > div {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+  }
+  
+  .left-main {
+      height: 100%;
+      width: 100%;
+      padding: 0px 0px 0px 50px;
+  }
+  
+  .middle-main {
+      /* flex-grow: -2; */
+      display: flex;
+      flex-shrink: 2;
+  }
+  
+  .right-main {
+      height: 100%;
+      width: 100%;
+      padding: 0px 50px 0px 0px;
+  }
+  
+  .text-areas {
+      /* height: 500px; */
+      resize: none;
+      flex: 5;
+  }
+  
+  .num-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .num-buttons > input {
+      box-sizing: border-box;
+      width: 35px;
+      padding: 0px;
+      border: 1;
+      text-align: center;
+      flex: 1;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }

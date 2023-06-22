@@ -10,10 +10,10 @@
     <header>
         <h1>Caesar Decipher</h1>
     </header>
-    <main>
+    <main id="main-section">
         <div class="main-screen">
             <div class="left-main">
-                <textarea id="normal-text" placeholder="Insert any message you want to encrypt!"></textarea>
+                <textarea class="text-areas" id="normal-text" placeholder="Insert any message you want to encrypt!"></textarea>
                 <input id="submit-button" type="button" value="Submit"> 
             </div>
             <div class="middle-main">
@@ -24,11 +24,14 @@
                 </div>
             </div>
             <div class="right-main">
-                <textarea id="cipher-text"></textarea>
+                <textarea class="text-areas" id="cipher-text" readonly></textarea>
                 <input type="button" value="Copy"> 
             </div>
         </div>
     </main>
+    <footer> 
+        <p>Caesar Decipher &copy</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
