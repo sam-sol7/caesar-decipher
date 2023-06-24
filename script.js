@@ -29,9 +29,13 @@ submitButton.onclick = function () {
     } 
 }
 
+let copyButton =  document.getElementById("copy-button");
+copyButton.onclick = function () { 
+    navigator.clipboard.writeText(cipherText.value);
+}
+
 let addButton =  document.getElementById("add-button");
 let subtractButton =  document.getElementById("subtract-button");
-
 addButton.onclick = function () { 
     indexInput.value++;
 }
