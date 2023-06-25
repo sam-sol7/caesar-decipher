@@ -11,26 +11,30 @@
         <h1>Caesar Decipher</h1>
     </header>
     <main id="main-section">
+            <div class="mode-container">
+                <button class="mode-buttons">Encode</button>
+                <button class="mode-buttons">Decode</button>
+            </div>    
         <div class="main-screen">
             <div class="left-main">
                 <textarea class="text-areas" id="normal-text" placeholder="Insert any message you want to encrypt!"></textarea>
-                <input id="submit-button" type="button" value="Submit"> 
+                <input id="submit-button" class="main-buttons" type="button" value="Submit"> 
             </div>
             <div class="middle-main">
-                <div class="num-buttons"> 
-                    <input id="add-button" type="button" value="+"> 
-                    <input id="index-input" type="number" min="0" max="99" value="1"> 
-                    <input id="subtract-button" type="button" value="-"> 
+                <div class="num-container"> 
+                    <input id="add-button" class="num-buttons" type="button" value="+"> 
+                    <input id="index-input" class="num-buttons" type="number" min="0" max="99" value="1"> 
+                    <input id="subtract-button" class="num-buttons" type="button" value="-"> 
                 </div>
             </div>
             <div class="right-main">
                 <textarea class="text-areas" id="cipher-text" readonly></textarea>
-                <input id="copy-button" type="button" value="Copy"> 
+                <input id="copy-button" class="main-buttons" type="button" value="Copy"> 
             </div>
         </div>
     </main>
     <footer> 
-        <p>Caesar Decipher &copy</p>
+        <p>&copy Caesar Decipher</p>
     </footer>
     <script src="script.js"></script>
 </body>
