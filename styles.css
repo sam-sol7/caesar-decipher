@@ -1,3 +1,7 @@
+* {
+    font-family: roboto;
+}
+
 html {
     height: 100%;
     width: 100%;
@@ -9,6 +13,7 @@ body {
     height: 100%;
     justify-content: space-evenly;
     margin: 0px;
+    background-color: #0B0C10; 
 }
 
 header {
@@ -31,6 +36,13 @@ main {
     height: 100%;
     width: 100%; 
     justify-content: center; 
+}
+
+input {
+    outline: none;
+    border: 0px;
+    background-color: #1F2833;
+    color: white;
 }
 
 .main-screen {
@@ -64,10 +76,14 @@ main {
 }
 
 .text-areas {
+    outline: none;
     resize: none;
     flex: 5;
     padding: 25px;
     font-size: 28px;
+    border: 0px; 
+    background-color: #1F2833;
+    color: white;
 }
 
 .num-container {
@@ -81,7 +97,6 @@ main {
     width: 50px;
     padding: 0px;
     text-align: center;
-    border: 1;
     font-size: 25px;
 }
 
@@ -92,6 +107,7 @@ input::-webkit-inner-spin-button {
 }
 
 .main-buttons {
+    border-top: 5px #66FCF1 solid;
     padding: 7px;
     font-size: 28px;
 }
@@ -103,4 +119,11 @@ input::-webkit-inner-spin-button {
 .mode-buttons {
     padding: 7px;
     font-size: 28px;
+    border: 0px;
+    background-color: #1F2833;
+    color: white;
+}
+
+#main-title {
+    color: #66FCF1;
 }
