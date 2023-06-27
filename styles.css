@@ -45,6 +45,12 @@ input {
     color: white;
 }
 
+input:hover {
+    background-color: #66FCF1;
+    color: #1F2833;
+    font-weight: 600;
+}
+
 .main-screen {
     display: flex;
     height: 100%;
