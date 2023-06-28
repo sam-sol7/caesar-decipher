@@ -13,19 +13,22 @@ submitButton.onclick = function () {
             cipherText.value += " ";
             continue;
         }
-        
         let alphabetIndex = alphabet.indexOf(normalText.value[letter].toLowerCase());
+        let isItLowerCase = (normalText.value[letter] == normalText.value[letter].toLowerCase()) ? true : false; 
         let cipherIndex = parseInt(indexInput.value) + alphabetIndex;
         
         if (cipherIndex < 0) {
-            cipherText.value += alphabet[26 + cipherIndex];
+            if (isItLowerCase) cipherText.value += alphabet[26 + cipherIndex];
+            else cipherText.value += alphabet[26 + cipherIndex].toUpperCase();
             continue;
         }
         if (cipherIndex > 25) {
-            cipherText.value += alphabet[cipherIndex - 26];
+            if (isItLowerCase) cipherText.value += alphabet[cipherIndex - 26];
+            else cipherText.value += alphabet[cipherIndex - 26].toUpperCase();
             continue;
         }
-        cipherText.value += alphabet[cipherIndex];
+        if (isItLowerCase) cipherText.value += alphabet[cipherIndex];
+        else cipherText.value += alphabet[cipherIndex].toUpperCase();
     } 
 }
 
