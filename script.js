@@ -5,8 +5,7 @@ let indexInput =  document.getElementById("index-input");
 const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 
 submitButton.onclick = function () { 
-    cipherText.value = "";
-    console.log(alphabet.length);
+    cipherText.value = ""; 
     
     for (let letter in normalText.value) {
         if (normalText.value[letter] == " ") {
@@ -18,13 +17,13 @@ submitButton.onclick = function () {
         let cipherIndex = parseInt(indexInput.value) + alphabetIndex;
         
         if (cipherIndex < 0) {
-            if (isItLowerCase) cipherText.value += alphabet[26 + cipherIndex];
-            else cipherText.value += alphabet[26 + cipherIndex].toUpperCase();
+            if (isItLowerCase) cipherText.value += alphabet[ (((cipherIndex % 26) + 26) % 26) ];
+            else cipherText.value += alphabet[ (((cipherIndex % 26) + 26) % 26) ].toUpperCase();
             continue;
         }
         if (cipherIndex > 25) {
-            if (isItLowerCase) cipherText.value += alphabet[cipherIndex - 26];
-            else cipherText.value += alphabet[cipherIndex - 26].toUpperCase();
+            if (isItLowerCase) cipherText.value += alphabet[cipherIndex % 26];
+            else cipherText.value += alphabet[cipherIndex % 26].toUpperCase();
             continue;
         }
         if (isItLowerCase) cipherText.value += alphabet[cipherIndex];
