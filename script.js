@@ -1,8 +1,9 @@
+const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
 let normalText =  document.getElementById("normal-text");
 let cipherText =  document.getElementById("cipher-text");
 let submitButton =  document.getElementById("submit-button");
 let indexInput =  document.getElementById("index-input");
-const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+let isItEncode = true;
 
 submitButton.onclick = function () { 
     cipherText.value = ""; 
@@ -43,4 +44,29 @@ addButton.onclick = function () {
 }
 subtractButton.onclick = function () { 
     indexInput.value--;
+}
+
+let encodeButton =  document.getElementById("encode-button");
+let decodeButton =  document.getElementById("decode-button");
+encodeButton.onclick = function () { 
+    if (encodeButton.classList.contains("active")){
+        encodeButton.classList.remove("active");
+        decodeButton.classList.add("active"); 
+        isItEncode = false;
+    } else {
+        encodeButton.classList.add("active");
+        decodeButton.classList.remove("active"); 
+        isItEncode = true;
+    }
+}
+decodeButton.onclick = function () { 
+    if (decodeButton.classList.contains("active")){
+        decodeButton.classList.remove("active");
+        encodeButton.classList.add("active"); 
+        isItEncode = true;
+    } else {
+        decodeButton.classList.add("active");
+        encodeButton.classList.remove("active"); 
+        isItEncode = false;
+    }
 }

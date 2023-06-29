@@ -130,6 +130,12 @@ input::-webkit-inner-spin-button {
     color: white;
 }
 
+.active {
+    background-color: #66FCF1;
+    color: #1F2833;
+    font-weight: 600;
+}
+
 #main-title {
     color: #66FCF1;
 }
