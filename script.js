@@ -7,9 +7,9 @@ let isItEncode = true;
 
 submitButton.onclick = function () { 
     cipherText.value = ""; 
-    
+
     for (let letter in normalText.value) {
-        if (!alphabet.includes(normalText.value[letter])) {
+        if (!alphabet.includes(normalText.value[letter].toLowerCase())) {
             cipherText.value += normalText.value[letter];
             continue;
         }
