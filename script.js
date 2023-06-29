@@ -8,8 +8,8 @@ submitButton.onclick = function () {
     cipherText.value = ""; 
     
     for (let letter in normalText.value) {
-        if (normalText.value[letter] == " ") {
-            cipherText.value += " ";
+        if (!alphabet.includes(normalText.value[letter])) {
+            cipherText.value += normalText.value[letter];
             continue;
         }
         let alphabetIndex = alphabet.indexOf(normalText.value[letter].toLowerCase());
